@@ -9,7 +9,7 @@ body{
 }
 
 #preloader{
-    background: #fff url(/pre.gif) no-repeat center center;
+    background: #fff url(./pre.gif) no-repeat center center;
     position: absolute;
     width: 100%;
     height: 100%;

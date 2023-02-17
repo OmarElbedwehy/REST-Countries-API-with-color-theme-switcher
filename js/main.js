@@ -183,8 +183,11 @@ window.onload = ()=>{
         top: window.localStorage.getItem("user_scroll"),
         behavior: "smooth",
     });
+    // FADE OUT PRELOADER
     document.querySelector("#preloader").style.opacity = 0;
-    document.querySelector("#preloader").style.ZIndex = -1;
+    setTimeout(() => {
+        document.querySelector("#preloader").style.display = "none";
+    }, 100);
 }
 
 // FADEOUT THE FOOTER

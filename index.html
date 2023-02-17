@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST Countries API with color theme switcher</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,600;0,800;1,300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h2>Where in the world?</h2>
+            <div class="dark-mode-toggle">
+                <div class="icon"><i class="fa-regular fa-moon"></i></div>
+                <p>Dark Mode</p>
+            </div>
+        </div>
+    </header>
+    <div class="scroller"></div>
+    <main>
+        <div class="main_container">
+            <div class="search_filter">
+                <div class="input">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input id="search" type="text" placeholder="Search for a country...">
+                </div>
+                <div class="select">
+                    <p class="select_place">Filter by Region</p>
+                    <ul class="options">
+                        <li class="option">Africa</li>
+                        <li class="option">Americas</li>
+                        <li class="option">Asia</li>
+                        <li class="option">Europe</li>
+                        <li class="option">Oceania</li>
+                    </ul>
+                    <i id="caret" class="fa-sharp fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="countries">
+                <div class="container">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Developed By <a href="https://github.com/OmarElbedwehy">Omar Elbedwehy</a></p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

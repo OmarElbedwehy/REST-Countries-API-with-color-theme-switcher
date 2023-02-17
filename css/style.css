@@ -1,0 +1,362 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: hsl(0, 0%, 98%);
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 2px 2px 4px #00000030;
+}
+
+header .container{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container .dark-mode-toggle{
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+header .container .dark-mode-toggle .icon{
+    margin-right: 7px;
+}
+
+header .container .dark-mode-toggle svg{
+    fill: #fff;
+    width: 25px;
+    display: block;
+}
+
+.dark-mode-toggle{
+    cursor: pointer;
+}
+
+main{
+    margin-top: 50px;
+}
+
+main .main_container{
+    width: 80%;
+    margin: auto;
+}
+
+main .main_container .search_filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .main_container .search_filter .input{
+    background-color: #fff;
+    padding: 15px 30px;
+    width: 35%;
+    color: hsl(0, 0%, 52%);
+    border-radius: 6px;
+    box-shadow: 2px 2px 4px 1px #00000030;
+}
+
+main .main_container .search_filter .input input{
+    margin-left: 10px;
+    padding: 5px 10px;
+    width: 70%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background-color: inherit;
+}
+
+main .main_container .search_filter .select{
+    padding: 15px 25px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 2px 2px 4px 1px #00000030;
+    width: 15%;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .main_container .search_filter .select #caret{
+    transition: 0.3s;
+    transform: rotate(0deg);
+}
+
+main .main_container .search_filter .select .options{
+    position: absolute;
+    bottom: -204px;
+    background-color: #fff;
+    list-style: none;
+    width: 86%;
+    left: 0;
+    border-radius: 6px;
+    padding: 10px 15px;
+    display: none;
+    z-index: 200;
+}
+
+.shown{
+    display: block !important;
+}
+
+main .main_container .search_filter .select .options .option{
+    padding: 7px 0;
+    transition: 0.3s;
+    border-radius: 6px;
+}
+
+main .main_container .search_filter .select .options .option:hover{
+    padding-left: 8px;
+    background-color: #f4f4f4;
+}
+
+.countries{
+    margin-top: 80px;
+}
+
+.countries .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.countries .container .country{
+    width: calc(100% / 4.2); /* 250px */
+    background-color: #fff;
+    height: 360px;
+    border-radius: 6px;
+    /* overflow: hidden; */
+    box-shadow: 2px 2px 4px 1px #00000024;
+    margin-bottom: 70px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+.countries .container .country:hover{
+    box-shadow: 2px 6px 4px 1px #00000059;
+}
+
+.countries .container .country::after{
+    content: 'See More Infos';
+    position: absolute;
+    top: -60px;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.countries .container .country::before{
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #000 transparent transparent transparent;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.countries .container .country:hover::after,
+.countries .container .country:hover::before{
+    opacity: 1;
+}
+
+.countries .container .country .overflow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0;
+    z-index: 100;
+}
+
+.countries .container .country .flag{
+    width: 100%;
+    height: 48%;
+}
+
+.countries .container .country img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px 6px 0 0;
+}
+
+.countries .container .country .text{
+    padding: 25px;
+}
+
+.countries .container .country .text h3{
+    margin-bottom: 15px;
+}
+
+.countries .container .country .text p{
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.countries .container .country .text p span{
+    color: hsl(200deg 15% 8% / 59%);
+}
+
+.scroller{
+    position: fixed;
+    top: 0;
+    width: 0%;
+    height: 7px;
+    background-color: blue;
+    border-radius: 10px;
+    z-index: 9999;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+footer{
+    padding: 20px 25px;
+    background-color: #cfcaca;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 10px;
+}
+
+footer a{
+    text-decoration: none;
+    color: #000;
+    position: relative;
+}
+
+footer a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: #fff;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+    border-radius: 7px;
+}
+
+footer a:hover::after{
+    width: 100%;
+}
+
+.dark{
+    background-color: hsl(207, 26%, 17%);
+    color: #fff;
+}
+
+.dark header{
+    background-color: hsl(209, 23%, 22%);
+}
+
+.dark main .main_container .search_filter .input{
+    background-color: hsl(209, 23%, 22%);
+    color: #fff;
+}
+
+.dark main .main_container .search_filter .input input{
+    color: #fff;
+}
+
+.dark main .main_container .search_filter .input input::placeholder{
+    color: #fff;
+}
+
+.dark main .main_container .search_filter .select{
+    background-color: hsl(209, 23%, 22%);
+}
+
+.dark .countries .container .country{
+    background-color: hsl(209, 23%, 22%);
+}
+
+.dark .countries .container .country .text p span{
+    color: hsl(0, 0%, 77%);
+}
+
+.dark main .main_container .search_filter .select .options{
+    background-color: hsl(209, 23%, 22%);
+}
+
+.dark main .main_container .search_filter .select .options .option:hover{
+    color: #000;
+}
+
+.dark header .container .dark-mode-toggle svg{
+    fill: #fff;
+}
+
+@media (max-width: 1114px){
+    .countries .container .country{
+        width: calc(100% / 3.1);
+    }
+}
+
+@media (max-width: 980px){
+    main .main_container .search_filter .select{
+        width: 20%;
+    }
+    .countries .container .country .flag{
+        height: 45%;
+    }
+}
+
+@media (max-width: 760px){
+    header .container{
+        width: 85%;
+    }
+    header h2{
+        font-size: 20px;
+    }
+    main .main_container{
+        width: 85%;
+    }
+    main .main_container .search_filter{
+        flex-wrap: wrap;
+    }
+    main .main_container .search_filter .input{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    main .main_container .search_filter .select{
+        width: 50%;
+    }
+    .countries .container{
+        width: 80% !important;
+        margin: auto;
+        display: block;
+    }
+    .countries .container .country{
+        width: 100%;
+    }
+}

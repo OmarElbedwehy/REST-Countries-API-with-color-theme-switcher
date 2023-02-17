@@ -182,11 +182,12 @@ window.onload = ()=>{
     window.scrollTo({
         top: window.localStorage.getItem("user_scroll"),
         behavior: "smooth",
-    })
+    });
+    document.querySelector("#preloader").style.opacity = 0;
 }
 
 // FADEOUT THE FOOTER
 
 setTimeout(()=>{
     document.querySelector("footer").style.opacity = "0.5"
-}, 5000)
+}, 30000)

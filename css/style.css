@@ -8,6 +8,16 @@ body{
     background-color: hsl(0, 0%, 98%);
 }
 
+#preloader{
+    background: #fff url(/pre.gif) no-repeat center center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: 0.5s;
+    z-index: 9999;
+}
+
 header{
     width: 100%;
     height: 70px;

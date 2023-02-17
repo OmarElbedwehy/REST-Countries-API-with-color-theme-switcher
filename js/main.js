@@ -184,6 +184,7 @@ window.onload = ()=>{
         behavior: "smooth",
     });
     document.querySelector("#preloader").style.opacity = 0;
+    document.querySelector("#preloader").style.ZIndex = -1;
 }
 
 // FADEOUT THE FOOTER
